@@ -1,0 +1,17 @@
+[project]
+name = "vless-vpn"
+version = "1.0.0"
+description = "A one-button VLESS VPN client for Linux"
+license = "GPL-3.0-or-later"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "BLE"]
+ignore = ["B008"]

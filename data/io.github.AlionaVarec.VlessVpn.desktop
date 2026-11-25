@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=VLESS VPN
+GenericName=VPN Client
+GenericName[ru]=VPN-клиент
+Comment=Connect to a VLESS server with one button
+Comment[ru]=Подключение к серверу VLESS одной кнопкой
+Exec=vless-vpn
+Icon=io.github.AlionaVarec.VlessVpn
+Terminal=false
+Categories=Network;
+Keywords=vpn;vless;reality;proxy;sing-box;
+Keywords[ru]=vpn;впн;vless;reality;прокси;
+StartupNotify=true

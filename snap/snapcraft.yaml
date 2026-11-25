@@ -1,0 +1,88 @@
+name: vless-vpn
+base: core26
+adopt-info: vless-vpn
+grade: stable
+confinement: strict
+license: GPL-3.0-or-later
+title: VLESS VPN
+contact: https://github.com/AlionaVarec/vless-vpn/issues
+issues: https://github.com/AlionaVarec/vless-vpn/issues
+source-code: https://github.com/AlionaVarec/vless-vpn
+website: https://github.com/AlionaVarec/vless-vpn
+icon: data/icons/hicolor/scalable/apps/io.github.AlionaVarec.VlessVpn.svg
+
+platforms:
+  amd64:
+  arm64:
+
+slots:
+  # GTK registers the app ID on the session bus to keep a single window
+  dbus-app:
+    interface: dbus
+    bus: session
+    name: io.github.AlionaVarec.VlessVpn
+
+apps:
+  vless-vpn:
+    command: usr/bin/vless-vpn
+    extensions: [gnome]
+    desktop: usr/share/applications/io.github.AlionaVarec.VlessVpn.desktop
+    common-id: io.github.AlionaVarec.VlessVpn
+    plugs:
+      - network
+      - home  # for `vless-vpn --import file`; the file dialog goes through the portal anyway
+    slots:
+      - dbus-app
+
+  # Runs as root and starts sing-box when the window asks for it. TUN and routes need
+  # network-control, the nftables rules of sing-box need firewall-control.
+  daemon:
+    command: usr/bin/vless-vpnd
+    daemon: simple
+    restart-condition: on-failure
+    plugs:
+      - network
+      - network-bind
+      - network-control
+      - firewall-control
+
+parts:
+  vless-vpn:
+    plugin: nil
+    source: .
+    override-build: |
+      set -eu
+      LIB="$CRAFT_PART_INSTALL/usr/lib/vless-vpn"
+      install -d "$LIB/vless_vpn" "$CRAFT_PART_INSTALL/usr/bin"
+      install -m 644 vless_vpn/*.py "$LIB/vless_vpn/"
+      install -m 755 vless-vpn vless-vpnd "$LIB/"
+      python3 tools/msgfmt.py --out "$LIB/vless_vpn/locale"
+      install -m 755 snap/local/vless-vpn snap/local/vless-vpnd "$CRAFT_PART_INSTALL/usr/bin/"
+      APP_ID=io.github.AlionaVarec.VlessVpn
+      install -D -m 644 data/$APP_ID.desktop "$CRAFT_PART_INSTALL/usr/share/applications/$APP_ID.desktop"
+      install -D -m 644 data/$APP_ID.metainfo.xml "$CRAFT_PART_INSTALL/usr/share/metainfo/$APP_ID.metainfo.xml"
+      install -D -m 644 data/icons/hicolor/scalable/apps/$APP_ID.svg \
+        "$CRAFT_PART_INSTALL/usr/share/icons/hicolor/scalable/apps/$APP_ID.svg"
+      install -D -m 644 LICENSE "$CRAFT_PART_INSTALL/usr/share/doc/vless-vpn/LICENSE"
+      craftctl set version="$(python3 -c 'import vless_vpn; print(vless_vpn.__version__)')"
+    parse-info: [usr/share/metainfo/io.github.AlionaVarec.VlessVpn.metainfo.xml]
+    build-packages:
+      - python3
+
+  sing-box:
+    plugin: nil
+    source: tools
+    build-packages:
+      - curl
+    override-build: |
+      set -eu
+      . ./sing-box.env
+      ARCH="$CRAFT_ARCH_BUILD_FOR"
+      eval "SUM=\$SB_SHA256_$ARCH"
+      NAME="sing-box-$SB_VERSION-linux-$ARCH"
+      curl -fL --proto '=https' -o sb.tar.gz \
+        "https://github.com/SagerNet/sing-box/releases/download/v$SB_VERSION/$NAME.tar.gz"
+      echo "$SUM  sb.tar.gz" | sha256sum -c
+      tar -xzf sb.tar.gz
+      install -D -m 755 "$NAME/sing-box" "$CRAFT_PART_INSTALL/bin/sing-box"
+      install -D -m 644 "$NAME/LICENSE" "$CRAFT_PART_INSTALL/usr/share/doc/sing-box/LICENSE"

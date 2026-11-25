@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-gi gir1.2-gtk-4.0 gir1.2-adw-1 python3-pytest \
+            appstream desktop-file-utils shellcheck
+      - name: Install sing-box for config checks
+        run: |
+          . tools/sing-box.env
+          curl -fsSL -o sb.tar.gz \
+            "https://github.com/SagerNet/sing-box/releases/download/v$SB_VERSION/sing-box-$SB_VERSION-linux-amd64.tar.gz"
+          echo "$SB_SHA256_amd64  sb.tar.gz" | sha256sum -c
+          tar -xzf sb.tar.gz
+          echo "SING_BOX=$PWD/sing-box-$SB_VERSION-linux-amd64/sing-box" >> "$GITHUB_ENV"
+      - name: Lint
+        run: |
+          pipx run ruff check .
+          shellcheck -x install.sh uninstall.sh snap/local/*
+          desktop-file-validate data/*.desktop
+          appstreamcli validate --no-net data/*.metainfo.xml
+      - name: Tests
+        run: /usr/bin/python3 -m pytest -q
+
+  snap:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: snapcore/action-build@v1

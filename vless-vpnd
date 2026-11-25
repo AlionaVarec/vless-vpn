@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+"""Starts the VLESS VPN privileged service (as root, from systemd or the snap)."""
+
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.realpath(__file__)))
+from vless_vpn.daemon import main  # noqa: E402
+
+sys.exit(main())

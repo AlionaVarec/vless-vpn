@@ -1,0 +1,4 @@
+#!/bin/sh
+# The sandbox rules of a running process never change, so the service gets the new permission
+# only after a restart. Without it sing-box keeps failing with "operation not permitted".
+snapctl restart "$SNAP_INSTANCE_NAME.daemon" || true

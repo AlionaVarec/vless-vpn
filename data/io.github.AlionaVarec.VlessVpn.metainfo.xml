@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.AlionaVarec.VlessVpn</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <name>VLESS VPN</name>
+  <summary>Connect to your VLESS server with one button</summary>
+  <summary xml:lang="ru">Подключение к своему серверу VLESS одной кнопкой</summary>
+
+  <developer id="io.github.alionavarec">
+    <name>Aliona Varec</name>
+  </developer>
+
+  <description>
+    <p>VLESS VPN is a small desktop client for your own VLESS server. Paste a vless:// link, press the big button, and all traffic of the computer goes through the server. The local network and Docker stay direct.</p>
+    <p xml:lang="ru">Небольшой клиент для своего сервера VLESS. Вставьте ссылку vless://, нажмите большую кнопку, и весь трафик компьютера пойдёт через сервер. Локальная сеть и Docker работают напрямую.</p>
+    <p>Features:</p>
+    <p xml:lang="ru">Возможности:</p>
+    <ul>
+      <li>One button to connect and disconnect</li>
+      <li xml:lang="ru">Одна кнопка, чтобы включить и выключить VPN</li>
+      <li>Several servers with live ping, switching in one click</li>
+      <li xml:lang="ru">Несколько серверов с пингом, переключение в один клик</li>
+      <li>Reality with XTLS Vision, TLS, WebSocket, gRPC, HTTP/2 and HTTPUpgrade</li>
+      <li xml:lang="ru">Reality с XTLS Vision, TLS, WebSocket, gRPC, HTTP/2 и HTTPUpgrade</li>
+      <li>DNS goes through the tunnel, so your provider does not see which sites you open</li>
+      <li xml:lang="ru">DNS идёт через туннель, и провайдер не видит, какие сайты вы открываете</li>
+      <li>Your public IP and country are shown after connecting</li>
+      <li xml:lang="ru">После подключения видно ваш внешний IP и страну</li>
+      <li>English and Russian interface</li>
+      <li xml:lang="ru">Интерфейс на русском и английском</li>
+    </ul>
+    <p>The tunnel is made by the sing-box core. The app collects no data. It talks only to your servers and, to show the public IP, to cloudflare.com.</p>
+    <p xml:lang="ru">Туннель строит ядро sing-box. Приложение не собирает данные. Оно обращается только к вашим серверам и, чтобы показать внешний IP, к cloudflare.com.</p>
+  </description>
+
+  <launchable type="desktop-id">io.github.AlionaVarec.VlessVpn.desktop</launchable>
+  <provides>
+    <binary>vless-vpn</binary>
+  </provides>
+  <translation type="gettext">vless-vpn</translation>
+
+  <url type="homepage">https://github.com/AlionaVarec/vless-vpn</url>
+  <url type="bugtracker">https://github.com/AlionaVarec/vless-vpn/issues</url>
+  <url type="vcs-browser">https://github.com/AlionaVarec/vless-vpn</url>
+
+  <categories>
+    <category>Network</category>
+  </categories>
+  <keywords>
+    <keyword>VPN</keyword>
+    <keyword>VLESS</keyword>
+    <keyword>Reality</keyword>
+    <keyword>sing-box</keyword>
+    <keyword>proxy</keyword>
+  </keywords>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Connected to a server</caption>
+      <caption xml:lang="ru">Подключено к серверу</caption>
+      <image>https://raw.githubusercontent.com/AlionaVarec/vless-vpn/v1.0.0/data/screenshots/connected-en.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Russian interface</caption>
+      <caption xml:lang="ru">Интерфейс на русском</caption>
+      <image>https://raw.githubusercontent.com/AlionaVarec/vless-vpn/v1.0.0/data/screenshots/connected-ru.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Adding servers from vless:// links</caption>
+      <caption xml:lang="ru">Добавление серверов по ссылкам vless://</caption>
+      <image>https://raw.githubusercontent.com/AlionaVarec/vless-vpn/v1.0.0/data/screenshots/add-en.png</image>
+    </screenshot>
+  </screenshots>
+
+  <requires>
+    <display_length compare="ge">360</display_length>
+    <internet>always</internet>
+  </requires>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </supports>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#a6c8f0</color>
+    <color type="primary" scheme_preference="dark">#16457f</color>
+  </branding>
+
+  <content_rating type="oars-1.1"/>
+
+  <releases>
+    <release version="1.0.0" date="2026-11-25">
+      <description>
+        <p>First public release.</p>
+        <ul>
+          <li>Connects the whole system to a VLESS server through sing-box</li>
+          <li>English and Russian interface, language can be changed in the menu</li>
+          <li>Available as a snap and with an install script</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+</component>

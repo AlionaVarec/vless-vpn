@@ -1,0 +1,361 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: vless_vpn/app.py:314
+msgid "Add Config"
+msgstr ""
+
+#: vless_vpn/app.py:351 vless_vpn/app.py:85
+msgid "Cancel"
+msgstr ""
+
+#: vless_vpn/app.py:352 vless_vpn/app.py:306
+msgid "Delete"
+msgstr ""
+
+#: vless_vpn/app.py:602 vless_vpn/app.py:658
+msgid "Disconnecting…"
+msgstr ""
+
+#: vless_vpn/app.py:724
+msgid "System"
+msgstr ""
+
+#: vless_vpn/app.py:728
+msgid "Language"
+msgstr ""
+
+#: vless_vpn/app.py:730
+msgid "About VLESS VPN"
+msgstr ""
+
+#: vless_vpn/app.py:760
+msgid "sing-box Core"
+msgstr ""
+
+#: vless_vpn/app.py:81
+msgid "New Config"
+msgstr ""
+
+#: vless_vpn/app.py:87
+msgid "Add"
+msgstr ""
+
+#: vless_vpn/app.py:93
+msgid "Paste a vless:// link. You can add several, one per line."
+msgstr ""
+
+#: vless_vpn/app.py:112
+msgid "Paste from Clipboard"
+msgstr ""
+
+#: vless_vpn/app.py:114
+msgid "Open File…"
+msgstr ""
+
+#: vless_vpn/app.py:161
+msgid "File with vless:// Links"
+msgstr ""
+
+#: vless_vpn/app.py:231
+msgid "Refresh Ping"
+msgstr ""
+
+#: vless_vpn/app.py:234
+msgid "Configs"
+msgstr ""
+
+#: vless_vpn/app.py:329
+#, python-brace-format
+msgid "Added {n} config"
+msgid_plural "Added {n} configs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: vless_vpn/app.py:349
+msgid "You can add the link again later."
+msgstr ""
+
+#: vless_vpn/app.py:410
+msgid "n/a"
+msgstr ""
+
+#: vless_vpn/app.py:415
+msgid "no answer"
+msgstr ""
+
+#: vless_vpn/app.py:427
+msgid "Ping will appear after the VPN reconnects"
+msgstr ""
+
+#: vless_vpn/app.py:429
+msgid "TCP ping of the server"
+msgstr ""
+
+#: vless_vpn/app.py:571
+msgid "Add a config first"
+msgstr ""
+
+#: vless_vpn/app.py:599
+msgid "Switching…"
+msgstr ""
+
+#: vless_vpn/app.py:599 vless_vpn/app.py:656
+msgid "Connecting…"
+msgstr ""
+
+#: vless_vpn/app.py:613
+msgid "Copy Command"
+msgstr ""
+
+#: vless_vpn/app.py:620
+msgid "The VPN service is not installed. Run install.sh from the project folder."
+msgstr ""
+
+#: vless_vpn/app.py:622
+msgid "The VPN service is from another version. Run install.sh again."
+msgstr ""
+
+#: vless_vpn/app.py:624 vless_vpn/daemon.py:370
+msgid "Only administrators can use the VPN"
+msgstr ""
+
+#: vless_vpn/app.py:630
+msgid "Command copied"
+msgstr ""
+
+#: vless_vpn/app.py:649
+msgid "Disconnect"
+msgstr ""
+
+#: vless_vpn/app.py:649
+msgid "Connect"
+msgstr ""
+
+#: vless_vpn/app.py:654
+msgid "Connected"
+msgstr ""
+
+#: vless_vpn/app.py:673
+msgid "No configs yet. Add a vless:// link."
+msgstr ""
+
+#: vless_vpn/app.py:754
+msgid "A simple VPN client for VLESS servers. One button turns it on for the whole system."
+msgstr ""
+
+#: vless_vpn/app.py:156
+msgid "The clipboard has no text"
+msgstr ""
+
+#: vless_vpn/app.py:258
+msgid "Main Menu"
+msgstr ""
+
+#: vless_vpn/app.py:417
+#, python-brace-format
+msgid "{ms} ms"
+msgstr ""
+
+#: vless_vpn/app.py:679
+msgid "Checking internet access…"
+msgstr ""
+
+#: vless_vpn/app.py:788
+#, python-brace-format
+msgid "added: {name}"
+msgstr ""
+
+#: vless_vpn/app.py:790
+#, python-brace-format
+msgid "skipped: {error}"
+msgstr ""
+
+#: vless_vpn/app.py:331
+#, python-brace-format
+msgid "skipped: {n}"
+msgstr ""
+
+#: vless_vpn/app.py:348
+#, python-brace-format
+msgid "Delete “{name}”?"
+msgstr ""
+
+#: vless_vpn/app.py:610
+#, python-brace-format
+msgid "The VPN needs network permissions. Run in a terminal: {command}"
+msgstr ""
+
+#: vless_vpn/app.py:671
+#, python-brace-format
+msgid "{name} · ping {ping}"
+msgstr ""
+
+#: vless_vpn/app.py:681
+msgid "The VPN is on, but there is no internet through it"
+msgstr ""
+
+#: vless_vpn/app.py:784
+#, python-brace-format
+msgid "cannot read {path}: {error}"
+msgstr ""
+
+#: vless_vpn/app.py:293
+#, python-brace-format
+msgid "link error: {error}"
+msgstr ""
+
+#: vless_vpn/app.py:550
+#, python-brace-format
+msgid "Failed: {error}"
+msgstr ""
+
+#: vless_vpn/app.py:576
+#, python-brace-format
+msgid "Link error: {error}"
+msgstr ""
+
+#: vless_vpn/app.py:617
+#, python-brace-format
+msgid "The VPN service is not running. Run in a terminal: {command}"
+msgstr ""
+
+#: vless_vpn/app.py:660
+msgid "Connection Error"
+msgstr ""
+
+#: vless_vpn/app.py:589
+#, python-brace-format
+msgid "Cannot find the address of {host}"
+msgstr ""
+
+#: vless_vpn/app.py:662
+msgid "Status Unknown"
+msgstr ""
+
+#: vless_vpn/app.py:664
+msgid "Disconnected"
+msgstr ""
+
+#: vless_vpn/app.py:683
+#, python-brace-format
+msgid "Your IP: {ip} · {country}"
+msgstr ""
+
+#: vless_vpn/client.py:28
+msgid "No permission to use the VPN service"
+msgstr ""
+
+#: vless_vpn/client.py:36
+msgid "The VPN service sent a broken reply"
+msgstr ""
+
+#: vless_vpn/client.py:38
+msgid "The VPN service did not answer"
+msgstr ""
+
+#: vless_vpn/daemon.py:255
+msgid "The tunnel did not come up in 10 seconds"
+msgstr ""
+
+#: vless_vpn/daemon.py:395
+msgid "Unknown command"
+msgstr ""
+
+#: vless_vpn/daemon.py:222 vless_vpn/daemon.py:235
+msgid "Cannot start the sing-box core"
+msgstr ""
+
+#: vless_vpn/daemon.py:376
+msgid "The VPN service got a broken request"
+msgstr ""
+
+#: vless_vpn/links.py:59
+msgid "the link must start with vless://"
+msgstr ""
+
+#: vless_vpn/links.py:70
+msgid "the link has no UUID, address or port"
+msgstr ""
+
+#: vless_vpn/links.py:88
+msgid "VLESS encryption is not supported by sing-box"
+msgstr ""
+
+#: vless_vpn/links.py:90
+msgid "TCP HTTP header obfuscation (headerType) is not supported by sing-box"
+msgstr ""
+
+#: vless_vpn/links.py:64
+msgid "invalid server address"
+msgstr ""
+
+#: vless_vpn/links.py:68
+msgid "invalid port"
+msgstr ""
+
+#: vless_vpn/links.py:75
+msgid "the UUID in the link is invalid"
+msgstr ""
+
+#: vless_vpn/links.py:100
+msgid "Reality needs a valid public key (pbk)"
+msgstr ""
+
+#: vless_vpn/links.py:102
+msgid "sid (short ID) must be a hex string of up to 16 characters"
+msgstr ""
+
+#: vless_vpn/links.py:82
+#, python-brace-format
+msgid "transport “{name}” is not supported by sing-box"
+msgstr ""
+
+#: vless_vpn/links.py:85
+#, python-brace-format
+msgid "security “{name}” is not supported"
+msgstr ""
+
+#: vless_vpn/links.py:96
+#, python-brace-format
+msgid "flow “{name}” is not supported"
+msgstr ""
+
+#: vless_vpn/singbox.py:181
+msgid "the request has an IPv6 address with a zone"
+msgstr ""
+
+#: vless_vpn/singbox.py:193
+msgid "the request must be a JSON object"
+msgstr ""
+
+#: vless_vpn/singbox.py:196
+msgid "the request has no link"
+msgstr ""
+
+#: vless_vpn/singbox.py:199
+msgid "the request has an invalid profile ID"
+msgstr ""
+
+#: vless_vpn/singbox.py:202
+msgid "bypass_ips must be a list of up to 256 addresses"
+msgstr ""
+
+#: vless_vpn/singbox.py:179
+msgid "the request has an invalid IP address"
+msgstr ""
+
+#: vless_vpn/singbox.py:209
+msgid "the link has parameters the config cannot use"
+msgstr ""
+
+#: vless_vpn/store.py:82
+msgid "no vless:// links in the text"
+msgstr ""
+
+#: vless_vpn/store.py:90
+#, python-brace-format
+msgid "“{name}” is already in the list"
+msgstr ""

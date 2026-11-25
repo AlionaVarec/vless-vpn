@@ -1,0 +1,3 @@
+#!/bin/sh
+# The window. Python and PyGObject come from the GNOME platform snap.
+exec "$SNAP/gnome-platform/usr/bin/python3" "$SNAP/usr/lib/vless-vpn/vless-vpn" "$@"

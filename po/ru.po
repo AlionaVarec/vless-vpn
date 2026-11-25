@@ -1,0 +1,288 @@
+# Russian translation of VLESS VPN.
+# This file is distributed under the same license as VLESS VPN (GPL-3.0-or-later).
+msgid ""
+msgstr ""
+"Project-Id-Version: vless-vpn 1.0.0\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Add Config"
+msgstr "Добавить конфиг"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Disconnecting…"
+msgstr "Отключение…"
+
+msgid "System"
+msgstr "Как в системе"
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "About VLESS VPN"
+msgstr "О программе"
+
+msgid "sing-box Core"
+msgstr "Ядро sing-box"
+
+msgid "New Config"
+msgstr "Новый конфиг"
+
+msgid "Add"
+msgstr "Добавить"
+
+msgid "Paste a vless:// link. You can add several, one per line."
+msgstr "Вставьте ссылку vless://. Можно несколько, каждую с новой строки."
+
+msgid "Paste from Clipboard"
+msgstr "Вставить из буфера"
+
+msgid "Open File…"
+msgstr "Из файла…"
+
+msgid "File with vless:// Links"
+msgstr "Файл со ссылками vless://"
+
+msgid "Refresh Ping"
+msgstr "Обновить пинг"
+
+msgid "Configs"
+msgstr "Конфиги"
+
+#, python-brace-format
+msgid "Added {n} config"
+msgid_plural "Added {n} configs"
+msgstr[0] "Добавлен {n} конфиг"
+msgstr[1] "Добавлено {n} конфига"
+msgstr[2] "Добавлено {n} конфигов"
+
+msgid "You can add the link again later."
+msgstr "Ссылку можно будет добавить снова."
+
+msgid "n/a"
+msgstr "н/д"
+
+msgid "no answer"
+msgstr "нет ответа"
+
+msgid "Ping will appear after the VPN reconnects"
+msgstr "Пинг появится после переподключения VPN"
+
+msgid "TCP ping of the server"
+msgstr "TCP-пинг сервера"
+
+msgid "Add a config first"
+msgstr "Сначала добавьте конфиг"
+
+msgid "Switching…"
+msgstr "Переподключение…"
+
+msgid "Connecting…"
+msgstr "Подключение…"
+
+msgid "Copy Command"
+msgstr "Скопировать команду"
+
+msgid "The VPN service is not installed. Run install.sh from the project folder."
+msgstr "Служба VPN не установлена. Запустите install.sh из папки проекта."
+
+msgid "The VPN service is from another version. Run install.sh again."
+msgstr "Служба VPN другой версии. Запустите install.sh ещё раз."
+
+msgid "Only administrators can use the VPN"
+msgstr "Управлять VPN могут только администраторы"
+
+msgid "Command copied"
+msgstr "Команда скопирована"
+
+msgid "Disconnect"
+msgstr "Отключить"
+
+msgid "Connect"
+msgstr "Подключить"
+
+msgid "Connected"
+msgstr "Подключено"
+
+msgid "No configs yet. Add a vless:// link."
+msgstr "Конфигов пока нет. Добавьте ссылку vless://."
+
+msgid ""
+"A simple VPN client for VLESS servers. One button turns it on for the whole "
+"system."
+msgstr ""
+"Простой VPN-клиент для серверов VLESS. Одна кнопка включает VPN для всей "
+"системы."
+
+msgid "The clipboard has no text"
+msgstr "В буфере обмена нет текста"
+
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#, python-brace-format
+msgid "{ms} ms"
+msgstr "{ms} мс"
+
+msgid "Checking internet access…"
+msgstr "Проверяю выход в интернет…"
+
+#, python-brace-format
+msgid "added: {name}"
+msgstr "добавлен: {name}"
+
+#, python-brace-format
+msgid "skipped: {error}"
+msgstr "пропущен: {error}"
+
+#, python-brace-format
+msgid "skipped: {n}"
+msgstr "пропущено: {n}"
+
+#, python-brace-format
+msgid "Delete “{name}”?"
+msgstr "Удалить «{name}»?"
+
+#, python-brace-format
+msgid "The VPN needs network permissions. Run in a terminal: {command}"
+msgstr "VPN нужны сетевые разрешения. Выполните в терминале: {command}"
+
+#, python-brace-format
+msgid "{name} · ping {ping}"
+msgstr "{name} · пинг {ping}"
+
+msgid "The VPN is on, but there is no internet through it"
+msgstr "VPN включён, но интернета через него нет"
+
+#, python-brace-format
+msgid "link error: {error}"
+msgstr "ошибка в ссылке: {error}"
+
+#, python-brace-format
+msgid "Failed: {error}"
+msgstr "Не получилось: {error}"
+
+#, python-brace-format
+msgid "Link error: {error}"
+msgstr "Ошибка в ссылке: {error}"
+
+#, python-brace-format
+msgid "The VPN service is not running. Run in a terminal: {command}"
+msgstr "Служба VPN не запущена. Выполните в терминале: {command}"
+
+msgid "Connection Error"
+msgstr "Ошибка подключения"
+
+msgid "Disconnected"
+msgstr "Отключено"
+
+#, python-brace-format
+msgid "Cannot find the address of {host}"
+msgstr "Не удалось найти адрес {host}"
+
+#, python-brace-format
+msgid "Your IP: {ip} · {country}"
+msgstr "Ваш IP: {ip} · {country}"
+
+msgid "No permission to use the VPN service"
+msgstr "Нет прав на управление службой VPN"
+
+msgid "The VPN service sent a broken reply"
+msgstr "Служба VPN прислала неверный ответ"
+
+msgid "The VPN service did not answer"
+msgstr "Служба VPN не ответила"
+
+msgid "The tunnel did not come up in 10 seconds"
+msgstr "Туннель не поднялся за 10 секунд"
+
+msgid "Unknown command"
+msgstr "Неизвестная команда"
+
+msgid "Cannot start the sing-box core"
+msgstr "Не удалось запустить ядро sing-box"
+
+msgid "The VPN service got a broken request"
+msgstr "Служба VPN получила неверный запрос"
+
+msgid "the link must start with vless://"
+msgstr "ссылка должна начинаться с vless://"
+
+msgid "the link has no UUID, address or port"
+msgstr "в ссылке нет UUID, адреса или порта"
+
+msgid "VLESS encryption is not supported by sing-box"
+msgstr "шифрование VLESS (encryption) sing-box не поддерживает"
+
+msgid "TCP HTTP header obfuscation (headerType) is not supported by sing-box"
+msgstr "маскировку TCP под HTTP (headerType) sing-box не поддерживает"
+
+msgid "invalid server address"
+msgstr "неверный адрес сервера"
+
+msgid "invalid port"
+msgstr "неверный порт"
+
+msgid "the UUID in the link is invalid"
+msgstr "UUID в ссылке некорректный"
+
+msgid "Reality needs a valid public key (pbk)"
+msgstr "для Reality нужен корректный публичный ключ (pbk)"
+
+msgid "sid (short ID) must be a hex string of up to 16 characters"
+msgstr "sid (shortId) должен быть hex-строкой до 16 символов"
+
+#, python-brace-format
+msgid "transport “{name}” is not supported by sing-box"
+msgstr "транспорт «{name}» sing-box не поддерживает"
+
+#, python-brace-format
+msgid "security “{name}” is not supported"
+msgstr "security «{name}» не поддерживается"
+
+#, python-brace-format
+msgid "flow “{name}” is not supported"
+msgstr "flow «{name}» не поддерживается"
+
+msgid "the request has an IPv6 address with a zone"
+msgstr "в запросе IPv6-адрес с зоной"
+
+msgid "the request must be a JSON object"
+msgstr "запрос должен быть объектом JSON"
+
+msgid "the request has no link"
+msgstr "в запросе нет ссылки"
+
+msgid "the request has an invalid profile ID"
+msgstr "в запросе неверный ID конфига"
+
+msgid "bypass_ips must be a list of up to 256 addresses"
+msgstr "bypass_ips должен быть списком до 256 адресов"
+
+msgid "the request has an invalid IP address"
+msgstr "в запросе неверный IP-адрес"
+
+msgid "no vless:// links in the text"
+msgstr "в тексте нет ссылок vless://"
+
+#, python-brace-format
+msgid "“{name}” is already in the list"
+msgstr "«{name}» уже есть в списке"
+
+msgid "Status Unknown"
+msgstr "Состояние неизвестно"
+
+msgid "the link has parameters the config cannot use"
+msgstr "в ссылке есть параметры, которые нельзя перенести в конфиг"
+
+#, python-brace-format
+msgid "cannot read {path}: {error}"
+msgstr "не удалось прочитать {path}: {error}"
