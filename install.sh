@@ -69,8 +69,12 @@ install -D -m 644 "$HERE/data/$APP_ID.desktop" "$PREFIX/share/applications/$APP_
 install -D -m 644 "$HERE/data/icons/hicolor/scalable/apps/$APP_ID.svg" \
     "$PREFIX/share/icons/hicolor/scalable/apps/$APP_ID.svg"
 install -D -m 644 "$HERE/data/$APP_ID.metainfo.xml" "$PREFIX/share/metainfo/$APP_ID.metainfo.xml"
-command -v update-desktop-database > /dev/null && update-desktop-database -q "$PREFIX/share/applications" || true
-command -v gtk-update-icon-cache > /dev/null && gtk-update-icon-cache -q -t "$PREFIX/share/icons/hicolor" || true
+if command -v update-desktop-database > /dev/null; then
+    update-desktop-database -q "$PREFIX/share/applications" || true
+fi
+if command -v gtk-update-icon-cache > /dev/null; then
+    gtk-update-icon-cache -q -t "$PREFIX/share/icons/hicolor" || true
+fi
 
 echo "==> service vless-vpn.service"
 sed -e "s|@LIB@|${LIB}|" -e "s|@SINGBOX@|${SINGBOX}|" "$HERE/data/vless-vpn.service.in" > "$UNIT"
